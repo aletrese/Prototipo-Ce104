@@ -245,7 +245,7 @@ body {
 }
 
 /* Ajustar a telefono */
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: 1280px) {
   .key-icon {
     display: none;
   }

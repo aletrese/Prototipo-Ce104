@@ -25,6 +25,20 @@ fetch('./footer.html')
                 }
             });
 
+
+fetch('./dino_redes.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('dino_cetis').innerHTML = data;
+
+    const scripts = document.getElementById('dino_cetis').getElementsByTagName('script');
+    for (let script of scripts) {
+        const newScript = document.createElement('script');
+        newScript.src = script.src;
+        document.body.appendChild(newScript);
+    }
+});
+
 window.addEventListener('scroll', () => {
     const container = document.getElementById('specialDiv');
     const scrollPosition = window.innerHeight + window.scrollY;
